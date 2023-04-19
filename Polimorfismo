@@ -1,0 +1,33 @@
+Polimorfismo em Java é a capacidade de um objeto ser referenciado
+por uma referência de um tipo mais geral e ainda assim executar o comportamento específico do tipo real do objeto.
+Isso permite que as classes derivadas substituam ou ampliem a funcionalidade
+de métodos da classe base e forneçam uma maneira de gerenciar diferentes tipos de objetos de forma mais genérica.
+
+//1°
+public class Animal {
+  public void emitirSom() {
+    System.out.println("Som de animal");
+  }
+}
+
+public class Cachorro extends Animal {
+  public void emitirSom() {
+    System.out.println("Latindo...");
+  }
+}
+
+public class Gato extends Animal {
+  public void emitirSom() {
+    System.out.println("Miando...");
+  }
+}
+
+//2°
+Animal[] animais = new Animal[2];
+animais[0] = new Cachorro();
+animais[1] = new Gato();
+
+for (int i = 0; i < animais.length; i++) {
+  animais[i].emitirSom();
+}
+
