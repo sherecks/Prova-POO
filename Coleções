@@ -1,0 +1,48 @@
+Coleções em Java são estruturas de dados que permitem armazenar e manipular conjuntos de objetos.
+As coleções são usadas para simplificar tarefas como adicionar, remover e pesquisar elementos,
+além de fornecer métodos para ordenar e percorrer os elementos de forma eficiente.
+
+Existem vários tipos de coleções em Java, como List, Set, Map, Queue e outras.
+Cada tipo de coleção tem sua própria implementação específica, que pode ser escolhida com base nos requisitos do projeto.
+
+Por exemplo, a interface List é usada para armazenar uma lista ordenada de elementos,
+onde cada elemento pode ser acessado por um índice. A implementação mais comum é a ArrayList, que é uma matriz
+redimensionável que armazena elementos em uma lista. Já a interface Set é usada para armazenar um conjunto de elementos únicos,
+sem ordem definida. A implementação mais comum é o HashSet, que armazena elementos em uma tabela de hash.
+
+//1° - Coleções
+import java.util.ArrayList;
+
+public class ExemploColecao {
+  public static void main(String[] args) {
+    // Criando uma lista de strings
+    ArrayList<String> lista = new ArrayList<String>();
+
+    // Adicionando elementos na lista
+    lista.add("maçã");
+    lista.add("banana");
+    lista.add("laranja");
+
+    // Acessando elementos da lista
+    System.out.println(lista.get(0)); // maçã
+    System.out.println(lista.get(1)); // banana
+    System.out.println(lista.get(2)); // laranja
+
+    // Percorrendo a lista
+    for (String fruta : lista) {
+      System.out.println(fruta);
+    }
+
+    // Removendo um elemento da lista
+    lista.remove("banana");
+
+    // Verificando o tamanho da lista
+    System.out.println(lista.size()); // 2
+
+    // Verificando se um elemento está na lista
+    System.out.println(lista.contains("maçã")); // true
+    System.out.println(lista.contains("banana")); // false
+  }
+}
+
+
