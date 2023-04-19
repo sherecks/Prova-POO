@@ -1,0 +1,61 @@
+A herança possibilita o reuso de atributos e métodos de uma classe
+pai por suas classes filhas.
+• A classe filha (chamada subclasse) herda os atributos e métodos da
+classe pai (chamada superclasse).
+• Em Java, uma subclasse só pode herdar de uma única superclasse, já
+uma superclasse pode ter ilimitado número de subclasses.
+
+//1° - Herança
+public class Funcionario(){
+  private String nome;
+  private String cpf;
+  private double salario;
+  
+  //1°
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+  
+   
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
+  
+  public void setSalario(double salario) {
+    this.salario = salario;
+  }
+  
+  //2°
+  public String getNome(){
+    return nome;
+  }
+  public String getCpf(){
+    return cpf;
+  }
+  public double getSalario(){
+    return salario;
+  }
+}
+
+//Criando uma Classe usando Herança!!!
+
+public class Gerente extends Funcionario {
+  private String depGerenciado;
+  private String nomeSecr;
+  
+  public Gerente(String nome, String cpf, double salario, String dep, String secr){
+    super(nome, cpf, salario);
+    depGerenciado = dep;
+    nomeSecr = secr;
+  }
+  
+  //1°
+  public void setDepGerenciado(String nomeDepto) {
+   depGerenciado = nomeDepto;
+  }
+  
+  //2°
+  public String getDepGerenciado() {
+    return depGerenciado;
+  }
+}
